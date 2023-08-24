@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="./img/Avengers-logo-1.png"/>
+      <!--Iconos-->
+  <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+  <!-- link al css -->
+  <link rel="stylesheet" href="css/main.css">
+    <title>BIENVENIDO A THE AVENGERS</title>
+</head>
+<body>
+    <header>
+        <div class="portada">
+            <img class="portada2" src="./img/Avengers_logo_PNG5.png" alt="logo de Avengers a modo de titulo de pagina">
+        </div>
+        <nav style="text-align: center;">
+            <a href="index.html">Home</a> <span>/</span>
+            <a href="basesdecombate.html">Bases de Combate</a> <span>/</span>
+            <a href="quienessomos.html">Mas de Nosotros</a> <span>/</span>
+            <a href="miremos.html">Videos</a> <span>/</span>
+            <a href="sumate.html">Se Parte de Avengers</a> <span>/</span>
+        </nav>
+
+            <h1>Datos recibidos:</h1>
+            <p>Nombre: <span id="name"></span></p>
+            <p>Apellido: <span id="lastname"></span></p>
+            <p>Alias: <span id="aka"></span></p>
+            <p>Dirección: <span id="street"></span></p>
+            <p>Ciudad: <span id="city"></span></p>
+            <p>Número de Teléfono: <span id="phone"></span></p>
+            <p>Fecha de Nacimiento: <span id="birthday"></span></p>
+            <p>Origen: <span id="gender"></span></p>
+            <p>Poder: <span id="main_power"></span></p>
+            <p>Expectativas: <span id="comentario"></span></p>
+            <p>Usuario: <span id="username"></span></p>
+            <p>Password: <span id="password"></span></p>
+        
+            <script>
+                // Obtener los parámetros de la URL
+                var params = new URLSearchParams(window.location.search);
+                
+                // Obtener los valores de los parámetros y mostrarlos en la página
+                document.getElementById('name').textContent = params.get('firstname');
+                document.getElementById('lastname').textContent = params.get('lastname');
+                document.getElementById('aka').textContent = params.get('aka');
+                document.getElementById('street').textContent = params.get('street');
+                document.getElementById('city').textContent = params.get('city');
+                document.getElementById('phone').textContent = params.get('phone');
+                document.getElementById('birthday').textContent = params.get('birthday');
+                document.getElementById('gender').textContent = params.get('gender');
+                
+                var powers = params.getAll('main_power');
+                document.getElementById('main_power').textContent = powers.join(', ');
+        
+                document.getElementById('comentario').textContent = params.get('comentario');
+                document.getElementById('username').textContent = params.get('username');
+                document.getElementById('password').textContent = params.get('password');
+            </script>
+        </body>
+        </html>
+        
+
+<!-- <form action="new_avenger.html" method="post"> -->
+    <!-- Tu formulario actual aquí -->
+
+    <!-- Agrega un botón de envío y reinicio -->
+    <!-- <input type="submit" value="Sumarme!">
+    <input type="reset" value="Reiniciar">
+</form> -->
+
+</body>
+</html>
+
+    </header>
+</body>
+<footer style="text-align: center;"> 
+    <h5>Sitio desarrollado por The Marian</h5>
+    <a href="#">Ir arriba</a>
+</footer>
+</html>

@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url("../img/fondoavengers.jpg");
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align:justify;
+    color: aliceblue;
+    font-weight: bolder;
+    position: relative;
+}
+h1{
+    text-align: center;
+}
+h3{
+    text-align: center;
+    color: violet;
+    text-decoration: underline;
+    letter-spacing: 3px;
+    font-size: 50px;
+}
+nav{
+    text-align: center;
+    padding-bottom: 15px;
+}
+ol{
+    list-style: none;
+    line-height: 2em;
+}
+.VengadoresPrincipal{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: azure;
+    font-weight: bold;
+}
+.portada{
+    height: 50%;
+    width: 50%;
+}
+.imagen_chica{
+    text-align: left ;
+}
+/*Supongamos que nuestro contenedor mide 150px x 150px*/
+.portada{
+    width:300px;
+    height:147px;
+  }
+  /*Aplicamos la propiedad object-fit cover, ajustar su tamaño y no perder la proporcion de nuestra imagen*/
+  .portada2{
+    object-fit: cover;
+    width:100%;
+    height:100%;
+  }
+  .BasesCombate{
+    text-align: center;
+  }
+  iframe{
+    align-content: center;
+  }
