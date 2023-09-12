@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 body {
     margin: 0;
     padding: 0;
@@ -20,10 +21,99 @@ h3{
     letter-spacing: 3px;
     font-size: 50px;
 }
+
 nav{
     text-align: center;
-    padding-bottom: 15px;
+    position: relative;
+	margin: 20px auto;
+	width: 590px;
+	height: 50px;
+	background: #34495e;
+	border-radius: 8px;
+	font-size: 0;
+	box-shadow: 0 2px 3px 0 rgba(0,0,0,.1);
 }
+nav a{
+	font-size: 15px;
+	color: white;
+	text-decoration: none;
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	text-align: center;
+}
+nav .animation{
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	background: #1abc9c;
+	border-radius: 8px;
+	transition: all .5s ease 0s;
+}
+nav a:nth-child(1){
+	width: 100px;
+}
+nav .start-home, a:nth-child(1):hover~.animation{
+	width: 100px;
+	left: 0;
+}
+nav a:nth-child(2){
+	width: 110px;
+}
+nav a:nth-child(2):hover~.animation{
+	width: 110px;
+	left: 100px;
+}
+nav a:nth-child(3){
+	width: 100px;
+}
+nav a:nth-child(3):hover~.animation{
+	width: 100px;
+	left: 210px;
+}
+nav a:nth-child(4){
+	width: 160px;
+}
+nav a:nth-child(4):hover~.animation{
+	width: 160px;
+	left: 310px;
+}
+nav a:nth-child(5){
+	width: 120px;
+}
+nav a:nth-child(5):hover~.animation{
+	width: 120px;
+	left: 470px;
+}
+
+
+.galeria{
+    display: grid;
+    place-items: center;
+}
+.galeria section{
+    display: flex;
+    width: 600px;
+    height: 430px;
+}
+.galeria section img{
+    width: 0px;
+    flex-grow: 1;
+    object-fit: cover;
+    opacity:.8;
+    transition:.5s ease;
+}
+
+.galeria section img:hover{
+    cursor: crosshair;
+    width: 300px;
+    opacity: 1;
+    filter: contrast(120%);
+}
+
+
+
 ol{
     list-style: none;
     line-height: 2em;
@@ -64,3 +154,334 @@ a{
     margin: 10px;
 
   }
+
+  table {
+    display: grid;
+    place-items: center;
+
+}
+
+td, tr {
+    border: 1px solid black;
+    text-align: center;
+}
+
+tr {
+    background-color: #f2f2f2;
+    color: #1f2029
+}
+/* Estilo para las imágenes de video */
+table img {
+    transition: transform 0.2s ease-in-out; /* Transición suave de 0.2 segundos */
+}
+
+/* Efecto de agrandamiento al pasar el puntero por encima */
+table img:hover {
+    transform: scale(1.1); /* Agrandar la imagen al 110% del tamaño original */
+}
+
+
+
+
+  /* estilos del login */
+
+ @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
+
+/* body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #fff;
+    background-color: #EA2C62;
+    overflow-x: hidden
+} */
+
+a {
+    cursor: pointer;
+    transition: all 200ms linear
+}
+
+a:hover {
+    text-decoration: none
+}
+
+.link {
+    color: #fff
+}
+
+.link:hover {
+    color: #EA2C62
+}
+
+p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.7
+}
+
+h4 {
+    font-weight: 600
+}
+
+h6 span {
+    padding: 0 20px;
+    text-transform: uppercase;
+    font-weight: 700
+}
+
+.section {
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.full-height {
+    min-height: 100vh
+}
+
+[type="checkbox"]:checked,
+[type="checkbox"]:not(:checked) {
+    position: absolute;
+    left: -9999px
+}
+
+.checkbox:checked+label,
+.checkbox:not(:checked)+label {
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 60px;
+    height: 16px;
+    border-radius: 2px;
+    padding: 0;
+    margin: 10px auto;
+    cursor: pointer;
+    background-color: #ffffff
+}
+
+.checkbox:checked+label:before,
+.checkbox:not(:checked)+label:before {
+    position: absolute;
+    display: block;
+    width: 36px;
+    height: 36px;
+    border-radius: 10%;
+    color: #EA2C62;
+    background-color: aquamarine;
+    content:'';
+    z-index: 20;
+    font-size: 12px;
+    top: -10px;
+    left: -10px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 24px;
+    transition: all 0.5s ease
+}
+
+.checkbox:checked+label:before {
+    transform: translateX(44px) rotate(-360deg);
+    background-image: url(../img/Avengers-logo-1.png);
+    background-size: contain;
+    background-color: transparent;
+}
+
+.card-3d-wrap {
+    position: relative;
+    width: 440px;
+    max-width: 100%;
+    height: 400px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    perspective: 800px;
+    margin-top: 40px
+}
+
+.card-3d-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: all 600ms ease-out
+}
+
+.login-div {
+    width: 150px
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    background-image: url(../img_portada/avengers_login.jpeg);
+    background-size: cover;
+    position: absolute;
+    border-radius: 0px;
+    left: 0;
+    top: 0;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    backface-visibility: hidden
+}
+
+.card-back {
+    transform: rotateY(180deg)
+}
+
+.checkbox:checked~.card-3d-wrap .card-3d-wrapper {
+    transform: rotateY(180deg)
+}
+
+.center-wrap {
+    position: absolute;
+    width: 100%;
+    padding: 0 35px;
+    top: 50%;
+    left: 0;
+    transform: translate3d(0, -50%, 35px) perspective(100px);
+    z-index: 20;
+    display: block
+}
+
+.form-group {
+    position: relative;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.form-style {
+    padding: 13px 20px;
+    padding-left: 55px;
+    height: 48px;
+    width: 100%;
+    font-weight: 500;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    outline: none;
+    color: #c4c3ca;
+    background-color: #1f2029;
+    border: none;
+    transition: all 200ms linear;
+    box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2)
+}
+
+.form-style:focus,
+.form-style:active {
+    border: none;
+    outline: none;
+    box-shadow: 0 4px 8px 0 rgba(21, 21, 21, .2)
+}
+
+.input-icon {
+    position: absolute;
+    top: 0;
+    left: 18px;
+    height: 48px;
+    font-size: 24px;
+    line-height: 48px;
+    text-align: left;
+    color: #EA2C62;
+    transition: all 200ms linear
+}
+
+.form-group input:-ms-input-placeholder {
+    color: #c4c3ca;
+    opacity: 0.7;
+    transition: all 200ms linear
+}
+
+.form-group input::-moz-placeholder {
+    color: #c4c3ca;
+    opacity: 0.7;
+    transition: all 200ms linear
+}
+
+.form-group input:-moz-placeholder {
+    color: #c4c3ca;
+    opacity: 0.7;
+    transition: all 200ms linear
+}
+
+.form-group input::-webkit-input-placeholder {
+    color: #c4c3ca;
+    opacity: 0.7;
+    transition: all 200ms linear
+}
+
+.form-group input:focus:-ms-input-placeholder {
+    opacity: 0;
+    transition: all 200ms linear
+}
+
+.form-group input:focus::-moz-placeholder {
+    opacity: 0;
+    transition: all 200ms linear
+}
+
+.form-group input:focus:-moz-placeholder {
+    opacity: 0;
+    transition: all 200ms linear
+}
+
+.form-group input:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: all 200ms linear
+}
+
+.btn {
+    border-radius: 4px;
+    height: 48px;
+    width: 75%;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: all 200ms linear;
+    margin-top: 5px;
+    padding: auto;
+    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    text-align: center;
+    border: none;
+    background-color: #EA2C62;
+    color: #fff;
+    box-shadow: 0 8px 24px 0 rgba(18, 248, 173, .2)
+}
+
+.btn:active,
+.btn:focus {
+    background-color: #fff;
+    color: #EA2C62;
+    box-shadow: 0 8px 24px 0 rgba(255, 255, 255, .2)
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #EA2C62;
+    box-shadow: 0 8px 24px 0 rgba(255, 255, 255, .2)
+}
+
+.logo {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    display: block;
+    z-index: 100;
+    transition: all 250ms linear
+}
+
+.logo img {
+    height: 26px;
+    width: auto;
+    display: block
+}
